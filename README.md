@@ -170,18 +170,7 @@ pip install -r app/requirements.txt
 streamlit run app/dashboard.py
 ```
 
-Live: https://REAL-URL-HERE.streamlit.app
-
-## Dashboard
-
-Interactive view of all results (no model runs, reads `reports/`):
-
-```bash
-pip install -r app/requirements.txt
-streamlit run app/dashboard.py
-```
-
-Live: https://REAL-URL-HERE.streamlit.app
+Live: https://market-forecast-benchmark-pjxpzclk4sp59mxczkbier.streamlit.app
 
 ## Repo layout
 
