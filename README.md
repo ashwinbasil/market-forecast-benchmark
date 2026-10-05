@@ -170,7 +170,7 @@ pip install -r app/requirements.txt
 streamlit run app/dashboard.py
 ```
 
-Live: https://market-forecast-benchmark-pjxpzclk4sp59mxczkbier.streamlit.app
+Live: https://market-forecast-benchmark.streamlit.app/
 
 ## Repo layout
 
