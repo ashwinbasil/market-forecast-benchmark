@@ -170,7 +170,7 @@ pip install -r app/requirements.txt
 streamlit run app/dashboard.py
 ```
 
-Live: https://YOUR-APP.streamlit.app
+Live: https://REAL-URL-HERE.streamlit.app
 
 ## Dashboard
 
@@ -181,7 +181,7 @@ pip install -r app/requirements.txt
 streamlit run app/dashboard.py
 ```
 
-Live: https://YOUR-APP.streamlit.app
+Live: https://REAL-URL-HERE.streamlit.app
 
 ## Repo layout
 
