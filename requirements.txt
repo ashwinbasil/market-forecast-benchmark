@@ -9,3 +9,6 @@ tensorflow
 xgboost
 shap
 jupyter
+pyyaml
+scipy
+pytest
