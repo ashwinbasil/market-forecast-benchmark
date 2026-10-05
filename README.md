@@ -161,6 +161,28 @@ python scripts/make_figure.py
 
 Runtime is dominated by LSTM refits (about 2 to 3 minutes per asset on CPU). Assets are defined in `configs/universe.yaml`; no ticker is hardcoded in code.
 
+## Dashboard
+
+Interactive view of all results (no model runs, reads `reports/`):
+
+```bash
+pip install -r app/requirements.txt
+streamlit run app/dashboard.py
+```
+
+Live: <paste Streamlit URL>
+
+## Dashboard
+
+Interactive view of all results (no model runs, reads `reports/`):
+
+```bash
+pip install -r app/requirements.txt
+streamlit run app/dashboard.py
+```
+
+Live: <paste Streamlit URL>
+
 ## Repo layout
 
 ```
