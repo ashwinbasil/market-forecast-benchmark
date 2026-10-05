@@ -183,7 +183,7 @@ reports/                     per-fold and summary CSVs, figures
 - [x] Phase 0: original dissertation notebook preserved untouched
 - [x] Phase 1: baselines, walk-forward, leakage-free LSTM, tests
 - [x] Phase 2: 7-sector extension with Holm-corrected paired tests
-- [x] Phase 3: oil and gas, point estimates (paired tests to add)
+- [x] Phase 3: oil and gas, point estimates
 - [ ] Phase 4: rare earth proxies (skipped, see data caveats)
 - [ ] Next: **volatility forecasting** (GARCH, HAR vs gradient boosting and LSTM) where predictability is known to exist; engineered features with SHAP; up/down classifier with AUC and a cost-adjusted backtest
 
