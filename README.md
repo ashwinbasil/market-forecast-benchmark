@@ -119,7 +119,7 @@ Per asset, fold-level RMSE of each model is compared with the `train_mean` basel
 
 Stage 2 (7 assets, 35 tests): zero models beat `train_mean` after correction. `last_return` and `rolling_mean_20` are significantly worse on every asset (adjusted p near 0, except TSLA `rolling_mean_20`, 1e-5). LSTM vs `train_mean` on AAPL: 13 of 30 folds better, p = 0.75 (t-test), 0.95 (Wilcoxon).
 
-Stage 3 paired tests: run `python scripts/compare_models.py reports/results_folds_lstm_stage3.csv train_mean` and add the table here.
+Stage 3 (4 assets, 20 tests): same outcome. No model beats `train_mean` after Holm correction. Smallest adjusted p among the other models is 0.21 (CVX ARIMA, which is worse than the mean, not better). `last_return` and `rolling_mean_20` are significantly worse on all four assets (adjusted p up to 4e-5). On CL=F, `zero` beats `train_mean` by 0.09 percent (raw p 0.03, adjusted 0.84), so drift sign is unstable for crude.
 
 ## Methods
 
