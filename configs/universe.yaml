@@ -1,0 +1,23 @@
+# Assets per stage. Run: python scripts/run_baselines.py --stage 1
+start: "2013-01-01"
+end: "2023-07-31"   # same window as dissertation, for comparison
+stages:
+  1_aapl:
+    - {ticker: AAPL, sector: tech}
+  2_industries:
+    - {ticker: MSFT, sector: tech}
+    - {ticker: JPM,  sector: banks}
+    - {ticker: JNJ,  sector: pharma}
+    - {ticker: WMT,  sector: retail}
+    - {ticker: CAT,  sector: industrials}
+    - {ticker: NEE,  sector: utilities}
+    - {ticker: TSLA, sector: high_vol}
+  3_oil_gas:
+    - {ticker: XOM,  sector: oil_gas}
+    - {ticker: CVX,  sector: oil_gas}
+    - {ticker: CL=F, sector: crude_futures}
+    - {ticker: NG=F, sector: gas_futures}
+  4_rare_earth:   # equity/ETF proxies, NOT metal spot prices
+    - {ticker: REMX,   sector: rare_earth_proxy}
+    - {ticker: MP,     sector: rare_earth_proxy}
+    - {ticker: LYC.AX, sector: rare_earth_proxy}
