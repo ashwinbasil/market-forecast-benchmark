@@ -12,3 +12,5 @@ data/processed/*
 *.h5
 .DS_Store
 docs/*.docx
+aapl-forecast/
+*.egg-info/
