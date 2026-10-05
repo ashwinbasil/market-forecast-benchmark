@@ -85,6 +85,7 @@ with tab1:
     lstm = view[view["model"] == "lstm"]
     c3.metric("Assets where LSTM RMSE < zero forecast", f"{int((lstm['rmse_vs_zero'] < 1).sum())} / {len(lstm)}")
     c4.metric("Significant wins vs train-mean (Holm)", f"{wins} / {len(cand)}")
+    st.caption(f"LSTM edges the zero forecast on {int((lstm['rmse_vs_zero'] < 1).sum())} of {len(lstm)} assets, but by under 1 percent and never significant after correction.")
     d = view[view["model"].isin(pick_models)].copy()
     d["ticker"] = pd.Categorical(d["ticker"], categories=list(dict.fromkeys(view["ticker"]))[::-1], ordered=True)
     fig = px.scatter(d.sort_values("ticker"), x="rmse_vs_zero", y="ticker", color="model", symbol="model",
@@ -128,7 +129,7 @@ with tab3:
                 "p_wilcoxon", "p_wilcoxon_holm", "p_ttest_holm"]]
     st.dataframe(show.style.format({"pct_diff": "{:+.2f}", "p_wilcoxon": "{:.4f}",
                                     "p_wilcoxon_holm": "{:.4f}", "p_ttest_holm": "{:.4f}"})
-                 .map(lambda v: "background-color: #fde2e2" if isinstance(v, float) and v < 0.05 else "",
+                 .map(lambda v: "background-color: #7f1d1d; color: #ffffff" if isinstance(v, float) and v < 0.05 else "",
                       subset=["p_wilcoxon_holm", "p_ttest_holm"]),
                  hide_index=True, width="stretch", height=480)
     st.caption("pct_diff: mean fold RMSE difference vs baseline, negative = better. "
