@@ -35,7 +35,7 @@ def main():
     res = pd.concat(out, ignore_index=True)
     rep = ROOT / "reports"
     rep.mkdir(exist_ok=True)
-    tag = "_lstm" if a.lstm else ""
+    tag = ("_lstm" if a.lstm else "") + (f"_stage{a.stage}" if a.stage else "")
     res.to_csv(rep / f"results_folds{tag}.csv", index=False)
     summ = summarize(res)
     summ.to_csv(rep / f"results_summary{tag}.csv", index=False)
